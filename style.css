@@ -1,67 +1,26 @@
+/* Import a modern Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f0f4f8; /* subtle cool background */
   color: #222;
   line-height: 1.6;
+  padding: 0 1rem; /* side padding for desktop */
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Headers with consistent margin and weight */
 h1, h2, h3 {
   margin-top: 0;
+  font-weight: 600;
+  color: #003366;
 }
 
-.site-header {
-  text-align: center;
-  background: #004aad;
-  color: #fff;
-  padding: 1.5em 1em;
-}
-
-.logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo img {
-  max-width: 80px;
-  margin-bottom: 0.5em;
-}
-
-.tagline {
-  font-size: 1.1em;
-  font-style: italic;
-}
-
-.hero-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-height: 400px;
-  object-fit: cover;
-}
-
-.intro {
-  text-align: center;
-  padding: 1.5em 1em;
-  background: #fff;
-}
-
-.subtitle {
-  font-size: 1.2em;
-  margin-bottom: 1em;
-}
-
-.btn {
-  display: inline-block;
-  background: #ffb400;
-  color: #000;
-  padding: 0.7em 1.2em;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
+/* Section card style */
 .offer,
 .documents,
 .how-it-works,
@@ -70,88 +29,256 @@ h1, h2, h3 {
 .loan-calculator,
 .contact {
   background: #fff;
-  margin: 1em auto;
-  padding: 1.5em;
+  margin: 1.5em auto;
+  padding: 2em;
   max-width: 800px;
-  border-radius: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
 }
 
-.offer h2 {
+.offer:hover,
+.documents:hover,
+.how-it-works:hover,
+.why-choose-us:hover,
+.faq:hover,
+.loan-calculator:hover,
+.contact:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Balanced header with gradient background and layout */
+.site-header {
   text-align: center;
+  background: linear-gradient(135deg, #004aad, #2a6fdb);
+  color: #fff;
+  padding: 1.5em 1em;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Logo and tagline stacked with spacing */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 100px;
   margin-bottom: 0.3em;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
 }
 
-.interest {
-  text-align: center;
+.tagline {
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: 400;
+  color: #e0e7ff;
+}
+
+/* Hero image with subtle overlay */
+.hero-image {
+  position: relative;
+  max-height: 420px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  margin: 2rem 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Subtitle */
+.subtitle {
   font-size: 1.3em;
-  color: #d60000;
+  margin-bottom: 1.2em;
+  color: #1a3c70;
+  text-align: center;
+  font-weight: 500;
 }
 
+/* Buttons with gradient and hover */
+.btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #ffb400, #ff9100);
+  color: #000;
+  padding: 0.9em 1.8em;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(255, 148, 0, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: linear-gradient(45deg, #ff9100, #ffb400);
+  box-shadow: 0 6px 20px rgba(255, 148, 0, 0.6);
+  outline: none;
+}
+
+/* Lists styling with icons */
 .documents ul,
 .why-choose-us ul {
   list-style: none;
   padding: 0;
+  margin-left: 0;
 }
 
 .documents li,
 .why-choose-us li {
-  margin: 0.4em 0;
+  margin: 0.5em 0;
+  padding-left: 1.6em;
+  position: relative;
+  font-weight: 500;
 }
 
-.how-it-works ol {
-  padding-left: 1.2em;
+/* Using a simple document icon from Unicode or replace with inline SVG */
+.documents li::before,
+.why-choose-us li::before {
+  content: "📄"; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2em;
 }
 
-.faq-item {
-  margin-bottom: 1em;
-}
-
+/* FAQ headings with accent color */
 .faq-item h4 {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.4em;
   color: #004aad;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
 }
 
+.faq-item h4:hover {
+  color: #ff9100;
+}
+
+/* Form styles */
 .loan-calculator label {
   display: block;
-  margin-top: 0.5em;
+  margin-top: 0.75em;
+  font-weight: 600;
+  color: #333;
 }
 
 .loan-calculator input {
   width: 100%;
-  padding: 0.5em;
+  padding: 0.6em 0.8em;
   margin-top: 0.3em;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.loan-calculator input:focus {
+  border-color: #004aad;
+  outline: none;
 }
 
 .loan-calculator button {
-  margin-top: 1em;
-  padding: 0.6em 1.2em;
+  margin-top: 1.2em;
+  padding: 0.75em 1.5em;
   background: #004aad;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 30px;
   cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 6px 15px rgba(0, 74, 173, 0.5);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .loan-calculator button:hover {
   background: #00337a;
+  box-shadow: 0 8px 25px rgba(0, 51, 122, 0.7);
 }
 
 #result {
-  margin-top: 1em;
-  font-weight: bold;
+  margin-top: 1.2em;
+  font-weight: 700;
+  color: #d60000;
+  text-align: center;
+  font-size: 1.2em;
 }
 
+/* Contact section */
 .contact p {
-  margin: 0.4em 0;
+  margin: 0.6em 0;
+  font-size: 1.1em;
+  color: #444;
 }
 
+/* Footer with gradient and subtle wave shape using SVG */
 footer {
   text-align: center;
   font-size: 0.9em;
-  padding: 1em;
-  background: #004aad;
+  padding: 2em 1em 3em;
+  background: linear-gradient(135deg, #004aad, #2a6fdb);
   color: #fff;
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: url('data:image/svg+xml;utf8,<svg width="100%" height="80" viewBox="0 0 100 20" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path fill="%232a6fdb" d="M0 20 Q50 0 100 20 L100 0 L0 0 Z"/></svg>') no-repeat bottom center;
+  background-size: cover;
+  pointer-events: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  body {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  .site-header {
+    padding: 1em 1rem;
+  }
+
+  .offer,
+  .documents,
+  .how-it-works,
+  .why-choose-us,
+  .faq,
+  .loan-calculator,
+  .contact {
+    padding: 1.2em 1rem;
+    margin: 1em 0;
+    border-radius: 10px;
+  }
+
+  .btn {
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+  }
 }
