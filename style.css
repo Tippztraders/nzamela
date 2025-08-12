@@ -28,7 +28,7 @@ h1, h2, h3 {
 
 
 /* CONTROLS THE IMAGE BACKGROUND OF HEADER */
-.site-header {
+.background-header {
   position: relative; /* allow absolutely positioned image */
   color: #fff;
   text-align: center;
@@ -401,5 +401,6 @@ footer::before {
     font-size: 1em;
   }
 }
+
 
 
