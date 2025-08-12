@@ -1,64 +1,82 @@
-/* Import a modern Google Font */
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 body {
   margin: 0;
   font-family: 'Inter', Arial, sans-serif;
-  background: #f0f4f8; /* subtle cool background */
+  background: #f0f4f8;
   color: #222;
   line-height: 1.6;
-  padding: 0 1rem; /* side padding for desktop */
+  padding: 0 1rem;
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
 }
 
-
-
-
-
-
-/* Headers with consistent margin and weight */
 h1, h2, h3 {
   margin-top: 0;
   font-weight: 600;
   color: #003366;
 }
 
-
-
-/* CONTROLS THE IMAGE BACKGROUND OF HEADER */
 .background-header {
-  position: relative; /* allow absolutely positioned image */
-  color: #fff;
+  position: relative;
   text-align: center;
-  padding: 1.5em 1em;
+  padding: 2rem 1rem 3rem;
+  color: #f0359f;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
-  overflow: hidden; /* clip image to rounded corners */
+  overflow: hidden;
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
-/* background image styling */
-.site-header .header-bg {
+.background-header .header-bg {
   position: absolute;
-  inset: 0; /* stretch to all sides */
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* maintain aspect ratio, fill */
-  z-index: 0; /* behind content */
+  object-fit: cover;
+  z-index: 0;
+  user-select: none;
+  pointer-events: none;
+  filter: brightness(0.6);
 }
 
-/* content above image */
-.site-header .logo {
+.background-header .logo,
+.background-header .tagline {
   position: relative;
   z-index: 1;
 }
 
+.background-header .logo img {
+  max-width: 100px;
+  margin-bottom: 0.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.background-header .logo h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
 
-
-
-
+.background-header .tagline {
+  font-style: italic;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.3;
+  font-size: 1.2rem !important;
+  color: red !important;
+}
 
 
 
@@ -401,6 +419,5 @@ footer::before {
     font-size: 1em;
   }
 }
-
 
 
