@@ -115,7 +115,7 @@
     function calculateLoan() {
       let amount = parseFloat(document.getElementById('amount').value);
       let months = parseInt(document.getElementById('months').value);
-      let interestRate = 0.30; // 30% interest rate
+      let interestRate = 0.30;
 
       if (isNaN(amount) || isNaN(months) || months <= 0) {
         document.getElementById('result').innerText = "Please enter valid values.";
