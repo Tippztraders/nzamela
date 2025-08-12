@@ -17,6 +17,11 @@
     <p class="tagline">Landing you a hand in times of need</p>
   </header>
 
+  <!-- HERO IMAGE -->
+  <section class="hero-image">
+    <img src="hero.jpg" alt="Happy customer holding loan approval">
+  </section>
+
   <!-- INTRO -->
   <section class="intro">
     <p class="subtitle">Fast, Reliable, and Affordable Loans When You Need Them Most</p>
@@ -61,6 +66,36 @@
     </ul>
   </section>
 
+  <!-- FAQ -->
+  <section class="faq">
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-item">
+      <h4>What is the maximum loan amount I can apply for?</h4>
+      <p>The maximum depends on your income and credit profile. We’ll inform you after reviewing your documents.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How long does it take to get approved?</h4>
+      <p>Most applications are processed within 24 hours of receiving all required documents.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do I need collateral?</h4>
+      <p>No collateral is required for our payday loans.</p>
+    </div>
+  </section>
+
+  <!-- LOAN CALCULATOR -->
+  <section class="loan-calculator">
+    <h3>Loan Calculator</h3>
+    <label for="amount">Loan Amount (ZAR):</label>
+    <input type="number" id="amount" placeholder="Enter amount">
+
+    <label for="months">Repayment Period (months):</label>
+    <input type="number" id="months" placeholder="Enter months">
+
+    <button onclick="calculateLoan()">Calculate</button>
+    <p id="result"></p>
+  </section>
+
   <!-- CONTACT -->
   <section class="contact">
     <h3>Contact Us</h3>
@@ -74,6 +109,26 @@
     <p>© 2025 Zamela Cashloans. All rights reserved.</p>
     <p>Privacy Policy | Terms & Conditions</p>
   </footer>
+
+  <!-- BASIC JS FOR LOAN CALCULATOR -->
+  <script>
+    function calculateLoan() {
+      let amount = parseFloat(document.getElementById('amount').value);
+      let months = parseInt(document.getElementById('months').value);
+      let interestRate = 0.30; // 30% interest rate
+
+      if (isNaN(amount) || isNaN(months) || months <= 0) {
+        document.getElementById('result').innerText = "Please enter valid values.";
+        return;
+      }
+
+      let total = amount + (amount * interestRate);
+      let monthly = total / months;
+
+      document.getElementById('result').innerText =
+        `Total Repayment: ZAR ${total.toFixed(2)} | Monthly Payment: ZAR ${monthly.toFixed(2)}`;
+    }
+  </script>
 
 </body>
 </html>
