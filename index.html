@@ -10,9 +10,13 @@
 
  
   
-
-  <header class="background-header">
-  <img src="backgrd.jpg" alt="" class="header-bg">
+<!-- MAIN TOP HEADER -->
+  <header class="Color-background-header">
+ <!-- <img src="backgrd.jpg" alt="" class="header-bg"> -->
+    
+    
+    
+    
   <div class="logo">
     <img src="logo.png" alt="Zamela Logo">
     <h1>Zamela Cashloans</h1>
@@ -28,7 +32,7 @@
 
   
   <!-- HERO IMAGE -->
-  <section class="hero-image">
+  <section class="happy-image">
     <img src="hero.jpg" alt="Happy customer holding loan approval">
   </section>
   
@@ -36,8 +40,8 @@
   
   
 
-   <!-- INTRO -->
-  <section class="intro">
+   <!-- FAST REALIABLE -->
+  <section class="fast">
     <p class="subtitle">Fast, Reliable, and Affordable Loans When You Need Them Most</p>
     <a href="#apply" class="btn">Apply Now</a>
   </section>
@@ -47,46 +51,87 @@
   
   
 
-  <!-- MAIN OFFER -->
-  <section class="offer">
-    <h2>PAYDAY LOANS</h2>
-    <p class="interest">30% Interest Rate</p>
-  </section>
+  <!--  PAYDAY LOANS + DOCUMENTS MERGED -->
+  <section class="payday">
+  <h2>PAYDAY LOANS</h2>
+    
+    
+  <p class="interest">30% Interest Rate</p>
+
+  <hr>
 
 
-  <!-- DOCUMENTS -->
-  <section class="documents">
-    <h3>Documents Required</h3>
-    <ul>
-      <li>☑ I.D Copy</li>
-      <li>☑ 3 Months Bank Statement</li>
-      <li>☑ Recent Payslip</li>
+  
+  <!-- DOCUMENTS REQUIRED -->
+<h3 class="docs-title">Documents Required</h3>
+<ul class="docs-list">
+  <li>🆔 I.D Copy</li>
+  <li>📋 3 Months Bank Statement</li>
+  <li>📑 Recent Payslip</li>
+</ul>
+
+
+  
+  
+    
+    
+   
+  
+    <!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="how-it-works-container">
+    <h3 class="docs-title">How It Works</h3>
+    <ul class="docs-list">
+      <li>Apply online in minutes — quick and hassle-free.</li>
+      <li>Upload your documents securely with encryption.</li>
+      <li>Get approval within 24 hours — sometimes even faster!</li>
+      <li>Receive your money directly to your bank account instantly.</li>
     </ul>
-  </section>
+  </div>
+</section>
 
-  <!-- HOW IT WORKS -->
-  <section class="how-it-works">
-    <h3>How It Works</h3>
-    <ol>
-      <li>Apply online in minutes.</li>
-      <li>Upload your documents securely.</li>
-      <li>Get approval within 24 hours.</li>
-      <li>Receive your money directly to your bank account.</li>
-    </ol>
-  </section>
+    
+    
+       
+    
+    
+  
+  
 
   <!-- WHY CHOOSE US -->
-  <section class="why-choose-us">
-    <h3>Why Choose Us?</h3>
-    <ul>
-      <li>No physical office needed — 100% online process.</li>
-      <li>Quick turnaround time.</li>
-      <li>Transparent interest rate with no hidden fees.</li>
-      <li>Friendly customer support.</li>
-    </ul>
-  </section>
+ <section class="why-choose-us full-block">
+  <h3>Why Choose Us?</h3>
+  <div class="why-cards">
+    <div class="why-card">
+      <div class="icon">💻</div>
+      <h4>100% Online Process</h4>
+      <p>No physical office needed — apply entirely online.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">⚡</div>
+      <h4>Fast Approval</h4>
+      <p>Quick turnaround time, usually within 24 hours.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">💰</div>
+      <h4>Transparent Rates</h4>
+      <p>Interest rates are clear, with no hidden fees.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🤝</div>
+      <h4>Friendly Support</h4>
+      <p>Our customer support is helpful and reliable.</p>
+    </div>
+  </div>
+</section>
+  
+  
+  
+  
+  
+  
 
-  <!-- FAQ -->
+  <!-- FA QUESTIONS -->
   <section class="faq">
     <h3>Frequently Asked Questions</h3>
     <div class="faq-item">
@@ -103,18 +148,29 @@
     </div>
   </section>
 
+    
+    
+    
+    
   <!-- LOAN CALCULATOR -->
   <section class="loan-calculator">
-    <h3>Loan Calculator</h3>
-    <label for="amount">Loan Amount (ZAR):</label>
-    <input type="number" id="amount" placeholder="Enter amount">
+  <h3>Loan Calculator</h3>
+  
+  <label for="amount">Loan Amount (ZAR):</label>
+  <input type="number" id="amount" min="500" value="500" placeholder="Enter amount">
+  <small>Minimum amount to borrow is 500</small>
 
-    <label for="months">Repayment Period (months):</label>
-    <input type="number" id="months" placeholder="Enter months">
+  <label for="months">Repayment Period (months):</label>
+  <input type="number" id="months" min="1" value="1" placeholder="Enter months">
 
-    <button onclick="calculateLoan()">Calculate</button>
-    <p id="result"></p>
-  </section>
+  <button onclick="calculateLoan()">Calculate</button>
+  <p id="result"></p>
+</section>
+    
+    
+    
+    
+    
 
   <!-- CONTACT -->
   <section class="contact">
