@@ -1,134 +1,46 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
 body {
   margin: 0;
-  font-family: 'Inter', Arial, sans-serif;
-  background: #f0f4f8;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
   color: #222;
   line-height: 1.6;
-  padding: 0 1rem;
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-h1, h2, h3 {
-  margin-top: 0;
-  font-weight: 600;
-  color: #003366;
-}
-
-.background-header {
-  position: relative;
-  text-align: center;
-  padding: 2rem 1rem 3rem;
-  color: #f0359f;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  overflow: hidden;
-  max-width: 960px;
-  margin: 0 auto;
-  font-family: 'Inter', Arial, sans-serif;
-}
-
-.background-header .header-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  user-select: none;
-  pointer-events: none;
-  filter: brightness(0.6);
-}
-
-.background-header .logo,
-.background-header .tagline {
-  position: relative;
-  z-index: 1;
-}
-
-.background-header .logo img {
-  max-width: 100px;
-  margin-bottom: 0.5rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.background-header .logo h1 {
-  margin: 0;
-  font-weight: 700;
-  font-size: 2rem;
-  letter-spacing: 1px;
-  line-height: 1.1;
-}
-
-.background-header .tagline {
-  font-style: italic;
-  margin-top: 0.5rem;
-  font-weight: 400;
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.3;
-  font-size: 1.2rem !important;
-  color: red !important;
-}
-
-
-
-/* Section card style */
-.offer,
-.documents,
-.how-it-works,
-.why-choose-us,
-.faq,
-.loan-calculator,
-.contact {
-  background: #fff;
-  margin: 1.5em auto;
-  padding: 2em;
-  max-width: 800px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease;
 }
 
 
 
 
-.offer:hover,
-.documents:hover,
-.how-it-works:hover,
-.why-choose-us:hover,
-.faq:hover,
-.loan-calculator:hover,
-.contact:hover {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-}
 
-/* Balanced header with gradient background and layout */
+
+
 .site-header {
   text-align: center;
-  background: linear-gradient(135deg, #004aad, #2a6fdb);
-  color: #fff;
+  color: white;
   padding: 1.5em 1em;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5em;
-  max-width: 960px;
-  margin: 0 auto;
+
+  /* Blue gradient base + transparent grey lines */
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(200, 200, 200, 0.15) 0px,
+      rgba(200, 200, 200, 0.15) 1px,
+      transparent 1px,
+      transparent 8px
+    ),
+    radial-gradient(circle at top left, #4a90e2, #004aad, #003580);
+
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
 }
 
 
 
 
-/* Logo and tagline stacked with spacing */
+
+
+
+
+
+
 .logo {
   display: flex;
   flex-direction: column;
@@ -140,69 +52,39 @@ h1, h2, h3 {
 
 
 .logo img {
-  max-width: 100px;
-  margin-bottom: 0.3em;
-  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
+  max-width: 80px;
+  margin-bottom: 0.5em;
 }
+
 
 
 
 
 
 .tagline {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-style: italic;
-  font-weight: 400;
-  color: #e0e7ff;
 }
 
 
 
 
-
-/* Hero image with subtle overlay */
-.hero-image {
-  position: relative;
-  max-height: 420px;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  margin: 2rem 0;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-
-
-
-.hero-image:hover img {
-  transform: scale(1.05);
-}
-
-
-
-
-
-/* Subtitle */
-.subtitle {
-  font-size: 1.3em;
-  margin-bottom: 1.2em;
-  color: #1a3c70;
+.intro {
   text-align: center;
-  font-weight: 500;
+  padding: 1.5em 1em;
+  background: #fff;
+}
+
+
+
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 1em;
 }
 
 
 
 
-
-/* Buttons with gradient and hover */
 .btn {
   display: inline-block;
   background: linear-gradient(45deg, #ffb400, #ff9100);
@@ -215,9 +97,6 @@ h1, h2, h3 {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
-
 .btn:hover,
 .btn:focus {
   background: linear-gradient(45deg, #ff9100, #ffb400);
@@ -228,136 +107,69 @@ h1, h2, h3 {
 
 
 
-/* Lists styling with icons */
+
+
+
+.offer,
+.documents,
+.how-it-works,
+.why-choose-us,
+.contact {
+  background: #fff;
+  margin: 1em auto;
+  padding: 1.5em;
+  max-width: 800px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+
+
+
+.offer h2 {
+  text-align: center;
+  margin-bottom: 0.3em;
+}
+
+.interest {
+  text-align: center;
+  font-size: 1.3em;
+  color: #d60000;
+}
+
+
+
+
+
 .documents ul,
 .why-choose-us ul {
   list-style: none;
   padding: 0;
-  margin-left: 0;
 }
-
-
-
-
 
 .documents li,
 .why-choose-us li {
-  margin: 0.5em 0;
-  padding-left: 1.6em;
-  position: relative;
-  font-weight: 500;
+  margin: 0.4em 0;
 }
 
 
 
 
-
-/* Using a simple document icon from Unicode or replace with inline SVG */
-.documents li::before,
-.why-choose-us li::before {
-  content: "📄"; 
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1.2em;
+.how-it-works ol {
+  padding-left: 1.2em;
 }
 
-
-
-
-/* FAQ headings with accent color */
-.faq-item h4 {
-  margin-bottom: 0.4em;
-  color: #004aad;
-  cursor: pointer;
-  user-select: none;
-  transition: color 0.3s ease;
+.contact p {
+  margin: 0.4em 0;
 }
 
-
-
-
-.faq-item h4:hover {
-  color: #ff9100;
-}
-
-
-
-
-
-/* Form styles */
-.loan-calculator label {
-  display: block;
-  margin-top: 0.75em;
-  font-weight: 600;
-  color: #333;
-}
-
-
-
-
-.loan-calculator input {
-  width: 100%;
-  padding: 0.6em 0.8em;
-  margin-top: 0.3em;
-  border: 1.5px solid #ccc;
-  border-radius: 6px;
-  font-size: 1em;
-  transition: border-color 0.3s ease;
-}
-
-
-
-
-
-.loan-calculator input:focus {
-  border-color: #004aad;
-  outline: none;
-}
-
-
-
-
-
-.loan-calculator button {
-  margin-top: 1.2em;
-  padding: 0.75em 1.5em;
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  padding: 1em;
   background: #004aad;
   color: #fff;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: 700;
-  box-shadow: 0 6px 15px rgba(0, 74, 173, 0.5);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-
-.loan-calculator button:hover {
-  background: #00337a;
-  box-shadow: 0 8px 25px rgba(0, 51, 122, 0.7);
-}
-
-
-
-
-
-#result {
-  margin-top: 1.2em;
-  font-weight: 700;
-  color: #d60000;
-  text-align: center;
-  font-size: 1.2em;
-}
-
-/* Contact section */
-.contact p {
-  margin: 0.6em 0;
-  font-size: 1.1em;
-  color: #444;
-}
-
-
-
 
 
 /* Footer with gradient and subtle wave shape using SVG */
@@ -388,36 +200,8 @@ footer::before {
 }
 
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  body {
-    padding: 0 1rem;
-    max-width: 100%;
-  }
-
-  
-  .site-header {
-    padding: 1em 1rem;
-  }
 
 
-  
-  .offer,
-  .documents,
-  .how-it-works,
-  .why-choose-us,
-  .faq,
-  .loan-calculator,
-  .contact {
-    padding: 1.2em 1rem;
-    margin: 1em 0;
-    border-radius: 10px;
-  }
 
-  .btn {
-    padding: 0.75em 1.5em;
-    font-size: 1em;
-  }
-}
 
 
