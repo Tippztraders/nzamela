@@ -35,8 +35,9 @@ body {
 ========================== */
 .background {
   position: relative;
-  width: 100%;
-  height: 300px;
+  width: 100vw;        /* full viewport width */
+  height: 40vh;        /* responsive height */
+  min-height: 250px;   /* ensure not too small on mobile */
   overflow: hidden;
 }
 
@@ -47,40 +48,61 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* background stays behind everything */
+  z-index: -1; /* background stays behind content */
 }
 
 .header-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: center;       /* horizontal centering */
+  justify-content: center;   /* vertical centering */
   height: 100%;
+  width: 100%;               /* take full width */
   text-align: center;
+  padding: 0 1em;            /* small padding so content doesn’t touch edges too tightly on small screens */
+  box-sizing: border-box;
 }
 
 .header-content .logo {
-  display: block;       /* ensures the image behaves properly */
+  display: block;
   height: 150px;
   width: auto;
-  margin: 0 auto 5px;  /* auto left/right centers it, 5px bottom gap */  
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
-
 
 .header-content .zamela {
   font-size: 2rem;
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-  margin: 0 0 2px 0;
+  margin: 0 0 5px 0;
 }
 
 .header-content .tagline {
   font-size: 1.2rem;
-  color: black;
+  color: white;
   margin: 0;
 }
+
+/* ======================
+   RESPONSIVE ADJUSTMENTS
+====================== */
+@media (max-width: 768px) {
+  .header-content .logo {
+    height: 100px;   /* smaller logo on mobile */
+  }
+
+  .header-content .zamela {
+    font-size: 1.5rem;
+  }
+
+  .header-content .tagline {
+    font-size: 1rem;
+  }
+}
+
+
+
 
 
 
@@ -589,6 +611,7 @@ footer::before {
   background-size: cover;
   pointer-events: none;
 }
+
 
 
 
