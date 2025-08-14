@@ -94,10 +94,12 @@ body {
 }
 
 .header-content .logo {
-  height: 80px; /* adjust as needed */
+  display: block;       /* ensures the image behaves properly */
+  height: 80px;
   width: auto;
   margin-bottom: 5px;
 }
+
 
 .header-content .zamela {
   font-size: 2rem;
@@ -620,6 +622,7 @@ footer::before {
   background-size: cover;
   pointer-events: none;
 }
+
 
 
 
