@@ -61,12 +61,17 @@ body {
 
 
 /* THIS CONTROLS IF HERO BACKGROUND IS AN IMAGE */
+.logo {
+  text-align: center;
+}
+
 .logo img {
-  max-width: 80px; /* adjust size here */
+  max-width: 100px; /* adjust size here */
   height: auto;
   display: block;
-  margin-bottom: 0.5em;
+  margin: 0 auto 0.5em;
 }
+
 
 
 
@@ -577,6 +582,7 @@ footer::before {
   background-size: cover;
   pointer-events: none;
 }
+
 
 
 
