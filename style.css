@@ -52,8 +52,15 @@ body {
   margin-top: 0.3em;
 }
 
+
+
+
+
+
+
+
 /* ==========================
-   HERO IMAGE
+  HAPPY IMAGE
 ========================== */
 .happy-image img {
   width: 100%;
@@ -552,3 +559,4 @@ footer::before {
   background-size: cover;
   pointer-events: none;
 }
+
