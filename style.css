@@ -95,8 +95,9 @@ body {
 
 .header-content .logo {
   display: block;       /* ensures the image behaves properly */
-  height: 80px;
+  height: 150px;
   width: auto;
+  margin: 0 auto 5px;  /* auto left/right centers it, 5px bottom gap */  
   margin-bottom: 5px;
 }
 
@@ -622,6 +623,7 @@ footer::before {
   background-size: cover;
   pointer-events: none;
 }
+
 
 
 
