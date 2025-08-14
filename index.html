@@ -236,8 +236,156 @@
   </script>  
   
 
+
+
+
+
+
+<!-- ====PET WIDGET === -->
+
+<div id="pet-widget">
+  <div id="pet-header">🐾 Pet of the Day 🐾</div>
+  <div id="pet-image-container"></div>
+  <button id="pet-button">Give Love ❤️</button>
+</div>
+
+<style>
+/* Floating widget box */
+#pet-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  width: 260px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+}
+
+/* Header text */
+#pet-header {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Image styling */
+#pet-image-container {
+  position: relative;
+  text-align: center;
+}
+#pet-image-container img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Button styling */
+#pet-button {
+  background: #ff4d6d;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 8px;
+  width: 100%;
+}
+#pet-button:hover {
+  background: #ff1e4d;
+}
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 22px;
+  animation: floatUp 2s ease forwards;
+}
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-80px); opacity: 0; }
+}
+
+/* Confetti */
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: hsl(var(--hue), 70%, 50%);
+  animation: fall 1.5s linear forwards;
+}
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100px) rotate(360deg); opacity: 0; }
+}
+</style>
+
+<script>
+const petImages = [
+  "https://placedog.net/400/300?id=1",
+  "https://placedog.net/400/300?id=2",
+  "https://placedog.net/400/300?id=3",
+  "https://placedog.net/400/300?id=4",
+  "https://placedog.net/400/300?id=5",
+  "https://placedog.net/400/300?id=6",
+  "https://placedog.net/400/300?id=7"
+];
+
+// Pick today's pet
+function getPetOfTheDay() {
+  const dayIndex = new Date().getDate() % petImages.length;
+  return petImages[dayIndex];
+}
+
+// Load pet into widget
+function loadPet() {
+  const container = document.getElementById("pet-image-container");
+  container.innerHTML = "";
+  const img = document.createElement("img");
+  img.src = getPetOfTheDay();
+  container.appendChild(img);
+}
+
+// Hearts + Confetti animation
+document.getElementById("pet-button").addEventListener("click", () => {
+  const container = document.getElementById("pet-image-container");
+
+  // Hearts
+  for (let i = 0; i < 5; i++) {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 80 + "%";
+    heart.style.top = "50%";
+    container.appendChild(heart);
+    setTimeout(() => heart.remove(), 2000);
+  }
+
+  // Confetti
+  for (let i = 0; i < 15; i++) {
+    const confetti = document.createElement("div");
+    confetti.className = "confetti";
+    confetti.style.setProperty("--hue", Math.random() * 360);
+    confetti.style.left = Math.random() * 100 + "%";
+    confetti.style.top = "50%";
+    container.appendChild(confetti);
+    setTimeout(() => confetti.remove(), 1500);
+  }
+});
+
+loadPet();
+</script>
+
+
+
+    
 </body>
 </html>
+
 
 
 
