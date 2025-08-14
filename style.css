@@ -20,28 +20,25 @@ body {
    MAIN TOP HEADER
 ========================== */
 .Color-background-header {
-  background-color: #808080; /* mid-grey */
+  position: relative;
+  background: url('backgroundhero_2.png') no-repeat center center;
+  background-size: cover; /* image fills header */
   color: white;
-  display: flex;
-  flex-direction: column; /* stack logo + tagline vertically */
-  align-items: center;
-  justify-content: center;
-  padding: 1em 20px;
-  box-sizing: border-box;
-}
-
-.Color-background-header .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 2em 20px;
+  box-sizing: border-box;
 }
 
 .Color-background-header .logo img {
-  max-width: 80px;
+  max-width: 100px; /* smaller logo */
+  height: auto;
   margin-bottom: 0.5em;
 }
 
-.Color-background-header .logo h1 {
+.Color-background-header h1 {
   font-size: 1.8rem;
   margin: 0;
 }
@@ -51,7 +48,6 @@ body {
   font-style: italic;
   margin-top: 0.3em;
 }
-
 
 
 
@@ -559,4 +555,5 @@ footer::before {
   background-size: cover;
   pointer-events: none;
 }
+
 
