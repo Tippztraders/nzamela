@@ -36,7 +36,7 @@ body {
 
 
 .Color-background-header .logo img {
-  max-width: 20px; /* smaller logo */
+  max-width: 5px; /* smaller logo */
   height: auto;
   margin-bottom: 0.5em;
 }
@@ -558,6 +558,7 @@ footer::before {
   background-size: cover;
   pointer-events: none;
 }
+
 
 
 
