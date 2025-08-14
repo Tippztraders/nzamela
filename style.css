@@ -19,6 +19,9 @@ body {
 /* ==========================
    MAIN TOP HEADER
 ========================== */
+
+/* THIS CONTROLS IF HERO BACKGROUND IS COLOUR */
+
 /* 
 .Color-background-header {
   position: relative;
@@ -32,11 +35,11 @@ body {
   padding: 2em 20px;
   box-sizing: border-box;
 }  
-  */
+  
 
 
 .Color-background-header .logo img {
-  max-width: 5px; /* smaller logo */
+  max-width: 100px; 
   height: auto;
   margin-bottom: 0.5em;
 }
@@ -51,6 +54,22 @@ body {
   font-style: italic;
   margin-top: 0.3em;
 }
+ */
+
+/* the code above is to control colour background, uncomment if you want to activate it rather */
+
+
+
+/* THIS CONTROLS IF HERO BACKGROUND IS AN IMAGE */
+.logo img {
+  max-width: 80px; /* adjust size here */
+  height: auto;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+
+
 
 
 
@@ -558,6 +577,7 @@ footer::before {
   background-size: cover;
   pointer-events: none;
 }
+
 
 
 
