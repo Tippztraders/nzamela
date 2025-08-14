@@ -63,19 +63,8 @@ body {
 /* ==========================
    MAIN TOP HEADER
 ========================== */
-/* Background image container */
-.background {
-  position: relative;
-  width: 100%;
-  height: 300px; /* adjust as needed */
-  overflow: hidden;
-}
 
-.background img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 
 
 .background {
@@ -89,56 +78,40 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* background stays behind everything */
 }
 
-/* Flex container to center content vertically and horizontally */
 .header-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+  text-align: center;
 }
-
 
 .header-content .logo {
-  height: 150px; /* 80px adjust size */
+  height: 80px; /* adjust as needed */
   width: auto;
+  margin-bottom: 5px;
 }
 
-
-/* Company name */
 .header-content .zamela {
   font-size: 2rem;
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-  margin: 8px 0 4px 0; /* top and bottom spacing */
-  text-align: center;
+  margin: 0 0 2px 0;
 }
 
-.header-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding-top: 20px; /* bring content slightly down or up as needed */
-  justify-content: flex-start; /* align to top instead of center */
-}
-
-
-/* Tagline */
 .header-content .tagline {
   font-size: 1.2rem;
-  color: #0d0d0d;
-  margin: 2px 0 0 0; /* small gap above */
-  text-align: center;
+  color: black;
+  margin: 0;
 }
-
-
-
-
 
 
 
@@ -647,6 +620,7 @@ footer::before {
   background-size: cover;
   pointer-events: none;
 }
+
 
 
 
