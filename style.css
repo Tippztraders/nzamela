@@ -19,10 +19,11 @@ body {
 /* ==========================
    MAIN TOP HEADER
 ========================== */
+/* 
 .Color-background-header {
   position: relative;
   background: url('backgroundhero_2.png') no-repeat center center;
-  background-size: cover; /* image fills header */
+  background-size: cover; 
   color: white;
   display: flex;
   flex-direction: column;
@@ -30,7 +31,9 @@ body {
   justify-content: center;
   padding: 2em 20px;
   box-sizing: border-box;
-}
+}  
+  */
+
 
 .Color-background-header .logo img {
   max-width: 100px; /* smaller logo */
@@ -555,5 +558,6 @@ footer::before {
   background-size: cover;
   pointer-events: none;
 }
+
 
 
