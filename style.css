@@ -67,29 +67,29 @@ body {
 .background {
   position: relative;
   width: 100%;
-  height: 300px; /* adjust height as needed */
+  height: 300px; /* adjust as needed */
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .background img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
 }
 
+
 /* Company logo */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
 .logo img {
   height: 80px; /* adjust as needed */
   width: auto;
 }
+
+
 
 /* Company name */
 .zamela {
@@ -100,6 +100,9 @@ body {
   margin-top: 10px;
 }
 
+
+
+
 /* Tagline */
 .tagline {
   text-align: center;
@@ -107,7 +110,6 @@ body {
   color: #444;
   margin: 15px 0;
 }
-
 
 
 
@@ -620,6 +622,7 @@ footer::before {
   background-size: cover;
   pointer-events: none;
 }
+
 
 
 
