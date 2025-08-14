@@ -85,7 +85,7 @@ body {
   left: 20px;
 }
 .logo img {
-  height: 80px; /* adjust as needed */
+  height: 120px; /* 80px;   adjust as needed */
   width: auto;
 }
 
@@ -622,6 +622,7 @@ footer::before {
   background-size: cover;
   pointer-events: none;
 }
+
 
 
 
